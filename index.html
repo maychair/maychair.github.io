@@ -229,6 +229,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/26/%E4%BD%BF%E7%94%A8-Typora%E3%80%81Hexo%E3%80%81github-page-%E5%86%99%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/26/%E4%BD%BF%E7%94%A8-Typora%E3%80%81Hexo%E3%80%81github-page-%E5%86%99%E5%8D%9A%E5%AE%A2/" itemprop="url">使用 Typora、Hexo、github page 写博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-26T10:48:17+08:00">
+                2019-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">-工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Hexo-安装与使用"><a href="#Hexo-安装与使用" class="headerlink" title="Hexo 安装与使用"></a>Hexo 安装与使用</h3><p>Hexo 是一种博客的管理发布系统，使用 Hexo 可以方便的管理和发布博客；安装步骤如下：</p>
+<p>第一步：安装 node.js</p>
+<p>node.js 官网下载编译好的安装包，*.tar.xz 格式，使用命令 <code>xz -d node..tar.xz</code> 和 <code>tar -xvf node..tar</code> 解压；设置好环境变量即可使用，<code>export PATH=$PATH:~/you/path/to/nodejs/bin</code></p>
+<p>第二步：新建博客目录，并安装 Hexo</p>
+<p><code>mkdir blog &amp;&amp; cd blog &amp;&amp; npm install -g hexo</code></p>
+<p><code>npm install hexo-deployer-git --save</code> –安装 hexo 发布助手</p>
+<p>第三步：初步使用 Hexo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init      --初始化</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo g          --生成静态文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s           --启动本地预览</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next   --更换next主题</span></span><br><span class="line">	vim _config.yml, 替换theme字段为next</span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo clean  --清除缓存</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo g           --发布</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Github-Page-的建立与使用"><a href="#Github-Page-的建立与使用" class="headerlink" title="Github Page 的建立与使用"></a>Github Page 的建立与使用</h3><p><img src="/images/%E4%BD%BF%E7%94%A8-Typora%E3%80%81Hexo%E3%80%81github-page-%E5%86%99%E5%8D%9A%E5%AE%A2/image-20191226112015192.png" alt="image-20191226112015192"></p>
+<p>第一步：新建一个分之，命名为 username.github.io；命名规则是固定的；</p>
+<p>第二步：设置你的git账户，譬如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "maychair"</span><br><span class="line">git config --global user.email "meichao.c@gmail.com"</span><br></pre></td></tr></table></figure>
+
+<p>第三步：设置git的免密登录（ssh-key）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C "meichao.c@gmail.com"</span><br><span class="line">cd ~/.ssh &amp;&amp; more id_rsa.pub</span><br><span class="line">-- id_rsa.pub 上的是你的公钥，把你的公钥放入github的公钥池中；如下图所示：</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E4%BD%BF%E7%94%A8-Typora%E3%80%81Hexo%E3%80%81github-page-%E5%86%99%E5%8D%9A%E5%AE%A2/image-20191226112812371.png" alt="image-20191226112812371"></p>
+<p>第四步：将 github page 与 Hexo 关联起来</p>
+<p>编辑 Hexo 的配置文件，<code>vim _config.yml</code>，找到 deploy 选项，制定你发布的平台为 git；修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repository: ssh:&#x2F;&#x2F;git@github.com&#x2F;maychair&#x2F;maychair.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-Typora-编辑-markdown-文档"><a href="#使用-Typora-编辑-markdown-文档" class="headerlink" title="使用 Typora 编辑 markdown 文档"></a>使用 Typora 编辑 markdown 文档</h3><p>typora 是一款所见即所得的 markdown 文档编辑器；</p>
+<p>使用 <code>hexo new &quot;title&quot;</code> 生成一个新的待发布文档，然后使用 typora 编辑 title.md 即可；</p>
+<p>注意：typora 保存本地图片的默认路径是本地绝对路径，将文档上传到 github 之后，本地绝对路径是无法识别的，因为你的图片在本地电脑上；需要将图片保存到相对路径，随文档一起上传 github 方可；</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/26/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -394,14 +560,32 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
